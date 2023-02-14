@@ -6,6 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/solution"
+        android:text="0"
+        android:textSize="32dp"
+        android:textColor="@color/black"
+        android:textAlignment="textEnd"
+        android:layout_above="@+id/result"
+        android:layout_margin="16dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/result"
+        android:text="0"
+        android:textSize="64dp"
+        android:textColor="@color/black"
+        android:textAlignment="textEnd"
+        android:layout_above="@+id/btn_layout"
+        android:layout_margin="16dp"
+        />
+
     <LinearLayout
         android:id="@+id/btn_layout"
         android:layout_width="match_parent"
