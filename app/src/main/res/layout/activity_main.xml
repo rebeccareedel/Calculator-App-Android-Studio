@@ -46,7 +46,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnC"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -58,7 +58,7 @@
                 app:cornerRadius="36dp" />
 
             <Button
-                android:id="@+id/open_bracket"
+                android:id="@+id/btn_open_bracket"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -70,7 +70,7 @@
                 app:cornerRadius="36dp" />
 
             <Button
-                android:id="@+id/closed_bracket"
+                android:id="@+id/btn_closed_bracket"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -82,7 +82,7 @@
                 app:cornerRadius="36dp" />
 
             <Button
-                android:id="@+id/divide"
+                android:id="@+id/btn_divide"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -135,7 +135,7 @@
                 app:cornerRadius="36dp" />
 
             <Button
-                android:id="@+id/multiply"
+                android:id="@+id/btn_multiply"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -188,7 +188,7 @@
                 app:cornerRadius="36dp" />
 
             <Button
-                android:id="@+id/plus"
+                android:id="@+id/btn_plus"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -241,7 +241,7 @@
                 app:cornerRadius="36dp" />
 
             <Button
-                android:id="@+id/minus"
+                android:id="@+id/btn_minus"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -261,7 +261,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/all_clear"
+                android:id="@+id/btn_all_clear"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -284,7 +284,7 @@
                 app:cornerRadius="36dp" />
 
             <Button
-                android:id="@+id/dot"
+                android:id="@+id/btn_dot"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -295,7 +295,7 @@
                 app:cornerRadius="36dp" />
 
             <Button
-                android:id="@+id/equals"
+                android:id="@+id/btn_equals"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
