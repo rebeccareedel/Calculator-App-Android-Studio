@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.Scriptable;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -58,7 +60,54 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view){
         MaterialButton btn = (MaterialButton) view;
         String btnText = btn.getText().toString();
-        solution.setText(btnText);
+        String dataToCalculate = solution.getText().toString();
 
+        // clears value when AC pressed
+        if(btnText.equals("AC")){
+            solution.setText("");
+            result.setText("0");
+            return;
+        }
+
+        //calculates value of operations
+        if(btnText.equals("=")){
+            solution.setText(result.getText());
+            return;
+        }
+
+        //clears last operation if C pressed
+        if(btnText.equals("C")){
+            if(dataToCalculate.length() > 1){
+                dataToCalculate = dataToCalculate.substring(0,dataToCalculate.length()-1);
+            }else{
+                dataToCalculate = "0";
+            }
+
+        }else{
+            dataToCalculate = dataToCalculate+btnText;
+        }
+        solution.setText(dataToCalculate);
+
+        String finalResult = getResult(dataToCalculate);
+
+        if(!finalResult.equals("Error")){
+            result.setText(finalResult);
+        }
+    }
+
+    //calculates result
+    String getResult(String data){
+        try{
+            Context context = Context.enter();
+            context.setOptimizationLevel(-1);
+            Scriptable scriptable = context.initStandardObjects();
+            String result = context.evaluateString(scriptable, data, "JavaScript", 1, null).toString();
+            if(result.endsWith(".0")){
+                result = result.replace(".0", "");
+            }
+            return result;
+        }catch (Exception e){
+            return "Error";
+        }
     }
 }
